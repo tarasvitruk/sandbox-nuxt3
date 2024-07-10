@@ -1,0 +1,15 @@
+@import './fonts.css';
+
+html,
+body,
+#__nuxt {
+	@apply w-full h-full min-h-[100vh] font-sans text-dark;
+}
+
+* {
+	outline-style: none;
+}
+
+:focus-visible {
+	outline: none;
+}
