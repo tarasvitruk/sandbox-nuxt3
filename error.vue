@@ -1,5 +1,5 @@
 <template>
-	<div class="nuxt-container">
+	<div class="flex justify-center items-center h-full">
 		<div class="flex flex-col text-center">
 			<div class="my-auto">
 				<h1 v-if="error.statusCode" class="text-5xl font-bold">
