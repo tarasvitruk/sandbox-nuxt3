@@ -4,7 +4,7 @@
 
 		<svgo-logo-tarvit class="w-20 h-auto mb-4" />
 
-		<button type="button" @click="scrollToSection('testId')" class="p-2 bg-gray-300">
+		<button type="button" class="p-2 bg-gray-300" @click="scrollToSection('testId')">
 			Scroll to testId
 		</button>
 	</div>
@@ -13,9 +13,11 @@
 <script setup lang="ts">
 const welcomeText = ref('Sandbox Nuxt 3');
 const myNumber = ref(7);
+const myNum = ref(0);
 
-function test (num: number) {
-	console.log(num);
+function test(num: number) {
+	myNum.value = num;
+	// console.log(myNum.value);
 }
 
 test(myNumber.value);

@@ -1,4 +1,5 @@
-import { createGtm, useGtm } from '@gtm-support/vue-gtm';
+// import { createGtm, useGtm } from '@gtm-support/vue-gtm';
+import { createGtm } from '@gtm-support/vue-gtm';
 
 export default defineNuxtPlugin((nuxtApp) => {
 	const gtmEnabled = (nuxtApp.$config.public.gtmEnabled === 'true');

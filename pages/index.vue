@@ -2,7 +2,7 @@
 	<div>
 		<TestComponent />
 
-		<div class="min-h-[200vh]"></div>
+		<div class="min-h-[200vh]"/>
 
 		<div id="testId" class="mb-32 text-center">
 			Section test

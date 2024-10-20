@@ -1,4 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { checker } from 'vite-plugin-checker';
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-10-19',
 
@@ -10,13 +11,14 @@ export default defineNuxtConfig({
   // },
 
   devtools: {
-    enabled: true
+    enabled: true,
   },
 
   modules: [
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
     'nuxt-svgo',
+    '@nuxt/eslint',
   ],
 
   css: ['~/assets/css/main.css'],
@@ -74,4 +76,20 @@ export default defineNuxtConfig({
     strict: true,
     typeCheck: true,
   },
-})
+
+  vite: {
+    plugins: [
+      checker({
+        enableBuild: false,
+        vueTsc: false,
+        eslint: {
+          lintCommand: 'eslint --ignore-pattern public .',
+          useFlatConfig: true,
+          dev: {
+            logLevel: [ 'error' ],
+          },
+        },
+      }),
+    ],
+  },
+});
